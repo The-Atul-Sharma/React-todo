@@ -14,7 +14,6 @@ function Header() {
     )
 }
 
-
 class App extends Component {
 
     constructor(props) {
@@ -77,7 +76,7 @@ class App extends Component {
                     <Header />
                     <NoteForm addNote={this.addNote} />
                 </div> 
-                <div className="list">
+                <ul className="list list-group">
                     {
                         this.state.notes.map((note) => {
                             return ( 
@@ -89,7 +88,7 @@ class App extends Component {
                             )
                         })
                     } 
-                </div> 
+                </ul> 
             </div>
         );
     }

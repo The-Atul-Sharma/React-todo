@@ -17,10 +17,10 @@ class Note extends Component{
 
     render(){
         return(
-        <div className="item">
-            <p>{this.noteContent}</p>
-            <button onClick={() => this.handleRemoveNote(this.noteId)}>&times;</button>
-        </div>
+            <li className="list-group-item ">
+                {this.noteContent}
+                <button type="button" className="close" onClick={() => this.handleRemoveNote(this.noteId)}>&times;</button>
+            </li>     
         )
     }
 }
@@ -30,5 +30,3 @@ Note.propTypes = {
 }
 
 export default Note;
-
-
